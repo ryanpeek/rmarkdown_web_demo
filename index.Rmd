@@ -1,29 +1,25 @@
 ---
-title: "Welcome Page"
+title: "Simple Webpages with RStudio & Github"
 ---
 
 
-## R Markdown
+## Building a RMarkdown Website
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is just a demo for how to build an RMarkdown website. the main files you'll need are:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+ - `.nojekyll` (this tells github how to build page)
+ - `_site.yml` (this is the outline/design of the site)
+ - `header.html` (*optional*: provides some extra formats/design options for header, footer, etc.)
+ - `style.css` (*optional*: provides instructions on how you want website to look)
+ - `[webpages].Rmd`: These are your webpage content files...one Rmd per webpage, named the same as the links in your `_site.yml`
+ 
+## Resources & Examples
 
-```{r cars, eval=FALSE, echo=TRUE}
-summary(cars)
-```
-
-```{r cars2, eval=TRUE, echo=FALSE}
-summary(cars)
-```
+ - http://rmarkdown.rstudio.com/rmarkdown_websites.html
+ - http://robertmitchellv.com/blog-building-site-with-rmarkdown.html
+ - http://www.alex-singleton.com/
+ - https://geographicdatascience.com/2016/08/18/building-an-academic-website-using-rmarkdown/
 
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

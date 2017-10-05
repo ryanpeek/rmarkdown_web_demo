@@ -1,0 +1,57 @@
+---
+title: "Maps and gifs"
+---
+
+## Another Silly RMarkdown Example
+
+You can include websites, gifs, etc. Like this:
+
+![fishslap](https://media.giphy.com/media/kTZBUjdRlZB3G/giphy.gif)
+
+Here's one of carson's photos:
+
+![photo](https://www.ucdavis.edu/sites/default/files/styles/panopoly_image_full/public/images/article/dsc_2068_1.jpg?itok=Rwuj4MPA&c=ed3acfbebc7a00ff1c4fd04ecd4c0017)
+
+
+## Including Maps with `leaflet`
+
+You can also embed maps with the leaflet package:
+
+```{r map}
+
+library(leaflet)
+library(htmltools)
+data(quakes)
+
+aMap <- leaflet() %>%
+  #setView(lng = -120.8, lat = 39, zoom = 5) %>%  # set to Auburn/Colfax, zoom 5 for CA 
+  addProviderTiles("Stamen.TopOSMFeatures", group = "OSM Features") %>%
+  addProviderTiles("Esri.WorldTopoMap", group = "Topo") %>%
+  addProviderTiles("Esri.WorldImagery", group = "ESRI Aerial") %>%
+
+  # add scale bar
+  addMeasure(position = "topright",
+             primaryLengthUnit = "meters",
+             primaryAreaUnit = "sqmeters",
+             activeColor = "#3D535D",
+             completedColor = "#7D4479") %>% 
+  
+  # all mines
+  addCircleMarkers(data=quakes, ~long, ~lat,
+                   group="Quakes", 
+                   stroke=TRUE, weight=0.3,radius=4,
+                   fillOpacity = 0.7,
+                   fillColor = "orange",
+                   popup=paste0("Station: ", quakes$stations,"<br>",
+                                "Magnitude: ", quakes$mag),
+                   clusterOptions = markerClusterOptions(),
+                   clusterId = "quakesCluster") %>%
+  
+  addLayersControl(
+    baseGroups = c("Topo","ESRI Aerial", "OSM Features"),
+    overlayGroups = c("Quakes"),
+    options = layersControlOptions(collapsed = T))
+
+aMap
+
+```
