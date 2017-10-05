@@ -1,0 +1,21 @@
+navbar:
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Background"
+      menu:
+        - text: "Using bash"
+          href: background_bash.html
+        - text: "Using sftp"
+          href: sftp.html
+output_dir: "."
+output:
+  html_document:
+    theme: spacelab
+    highlight: pygments
+    toc: true
+    toc_float:
+      collapsed: false
+    include:
+      in_header: header.html
+    css: styles.css
