@@ -10,6 +10,9 @@ navbar:
           href: demo2.html
         - text: "Page 1"
           href: page1.html
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/ryanpeek/rmarkdown_web_demo
 output_dir: "docs"
 output:
   html_document:

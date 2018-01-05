@@ -23,6 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
 
@@ -287,7 +288,12 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/ryanpeek/rmarkdown_web_demo">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -309,10 +315,10 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li><code>_site.yml</code>: This is the road map that provides the outline of your site. It’s the bones you stitch everything onto, and the design of how you want things to look overall.</li>
 <li><code>.Rmd</code>: These are your Rmarkdown files that will be used to render your webpage content, each <code>.Rmd</code> should have a correpsonding <code>.html</code>. When we knit, the <code>.Rmd</code>, RStudio will create file named the identically, but with a <code>.html</code> extension.</li>
+<li><code>.nojekyll</code>: This tells github how to build page, and not to use the default web-rendering engine “jekyll”.</li>
 </ol>
-<p><strong>Additional Options</strong></p>
+<p><strong>Additional Styling Options</strong></p>
 <ul>
-<li><code>.nojekyll</code> (<em>optional</em>: this tells github how to build page)</li>
 <li><code>header.html</code> (<em>optional</em>: provides some extra formats/design options for header, footer, etc.)</li>
 <li><code>style.css</code> (<em>optional</em>: provides instructions on how you want website to look)</li>
 </ul>
