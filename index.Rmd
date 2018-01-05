@@ -10,10 +10,10 @@ There are a few pieces that all need to fit together to create a website using t
 
   1. `_site.yml`: This is the road map that provides the outline of your site. It's the bones you stitch everything onto, and the design of how you want things to look overall. 
   2.  `.Rmd`: These are your Rmarkdown files that will be used to render your  webpage content, each `.Rmd` should have a correpsonding `.html`. When we knit, the `.Rmd`, RStudio will create file named the identically, but with a `.html` extension.
+  3. `.nojekyll`: This tells github how to build page, and not to use the default web-rendering engine "jekyll".
 
-**Additional Options**
+**Additional Styling Options**
 
- - `.nojekyll` (*optional*: this tells github how to build page)
  - `header.html` (*optional*: provides some extra formats/design options for header, footer, etc.)
  - `style.css` (*optional*: provides instructions on how you want website to look)
 
