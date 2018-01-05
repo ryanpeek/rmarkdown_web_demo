@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# for mac users:
+.DS_Store

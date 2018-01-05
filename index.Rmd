@@ -1,18 +1,27 @@
 ---
-title: "Simple Webpages with RStudio & Github"
+title: "Simple RMarkdown Websites with RStudio & Github"
 ---
 
+Want to build your own webpage? Need to quickly generate some content and make it publically available? Both? Well, hopefully this is one of the quickest ways to do so using the tools we've already covered (R/RStudio & git/Github). This also assumes you have some knowledge about what an RMarkdown document is, and how to create one.
 
-## Building a RMarkdown Website
+## Building a Website from RMarkdown Files
 
-This is just a demo for how to build an RMarkdown website. the main files you'll need are:
+There are a few pieces that all need to fit together to create a website using this framework. The main pieces are as follows:
 
- - `.nojekyll` (this tells github how to build page)
- - `_site.yml` (this is the outline/design of the site)
+  1. `_site.yml`: This is the road map that provides the outline of your site. It's the bones you stitch everything onto, and the design of how you want things to look overall. 
+  2.  `.Rmd`: These are your Rmarkdown files that will be used to render your  webpage content, each `.Rmd` should have a correpsonding `.html`. When we knit, the `.Rmd`, RStudio will create file named the identically, but with a `.html` extension.
+
+**Additional Options**
+
+ - `.nojekyll` (*optional*: this tells github how to build page)
  - `header.html` (*optional*: provides some extra formats/design options for header, footer, etc.)
  - `style.css` (*optional*: provides instructions on how you want website to look)
- - `[webpages].Rmd`: These are your webpage content files...one Rmd per webpage, named the same as the links in your `_site.yml`
- 
+
+### Formatting `.yml`
+
+### Formatting Github Repo online
+
+
 ## Resources & Examples
 
  - http://rmarkdown.rstudio.com/rmarkdown_websites.html

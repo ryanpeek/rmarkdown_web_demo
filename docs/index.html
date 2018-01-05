@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Simple RMarkdown Websites with RStudio &amp; Github</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,7 +54,6 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
 
 </head>
 
@@ -281,6 +280,9 @@ div.tocify {
     <li>
       <a href="demo2.html">Demo 2</a>
     </li>
+    <li>
+      <a href="page1.html">Page 1</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -295,13 +297,40 @@ div.tocify {
 
 
 
+<h1 class="title toc-ignore">Simple RMarkdown Websites with RStudio &amp; Github</h1>
 
 </div>
 
 
-<div id="rmarkdown_web_demo" class="section level1">
-<h1>rmarkdown_web_demo</h1>
-<p>Rmarkdown website</p>
+<p>Want to build your own webpage? Need to quickly generate some content and make it publically available? Both? Well, hopefully this is one of the quickest ways to do so using the tools we’ve already covered (R/RStudio &amp; git/Github). This also assumes you have some knowledge about what an RMarkdown document is, and how to create one.</p>
+<div id="building-a-website-from-rmarkdown-files" class="section level2">
+<h2>Building a Website from RMarkdown Files</h2>
+<p>There are a few pieces that all need to fit together to create a website using this framework. The main pieces are as follows:</p>
+<ol style="list-style-type: decimal">
+<li><code>_site.yml</code>: This is the road map that provides the outline of your site. It’s the bones you stitch everything onto, and the design of how you want things to look overall.</li>
+<li><code>.Rmd</code>: These are your Rmarkdown files that will be used to render your webpage content, each <code>.Rmd</code> should have a correpsonding <code>.html</code>. When we knit, the <code>.Rmd</code>, RStudio will create file named the identically, but with a <code>.html</code> extension.</li>
+</ol>
+<p><strong>Additional Options</strong></p>
+<ul>
+<li><code>.nojekyll</code> (<em>optional</em>: this tells github how to build page)</li>
+<li><code>header.html</code> (<em>optional</em>: provides some extra formats/design options for header, footer, etc.)</li>
+<li><code>style.css</code> (<em>optional</em>: provides instructions on how you want website to look)</li>
+</ul>
+<div id="formatting-.yml" class="section level3">
+<h3>Formatting <code>.yml</code></h3>
+</div>
+<div id="formatting-github-repo-online" class="section level3">
+<h3>Formatting Github Repo online</h3>
+</div>
+</div>
+<div id="resources-examples" class="section level2">
+<h2>Resources &amp; Examples</h2>
+<ul>
+<li><a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html" class="uri">http://rmarkdown.rstudio.com/rmarkdown_websites.html</a></li>
+<li><a href="http://robertmitchellv.com/blog-building-site-with-rmarkdown.html" class="uri">http://robertmitchellv.com/blog-building-site-with-rmarkdown.html</a></li>
+<li><a href="http://www.alex-singleton.com/" class="uri">http://www.alex-singleton.com/</a></li>
+<li><a href="https://geographicdatascience.com/2016/08/18/building-an-academic-website-using-rmarkdown/" class="uri">https://geographicdatascience.com/2016/08/18/building-an-academic-website-using-rmarkdown/</a></li>
+</ul>
 </div>
 
 

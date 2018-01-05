@@ -8,7 +8,9 @@ navbar:
           href: demo1.html
         - text: "Demo 2"
           href: demo2.html
-output_dir: "."
+        - text: "Page 1"
+          href: page1.html
+output_dir: "docs"
 output:
   html_document:
     theme: united
@@ -16,4 +18,3 @@ output:
     toc: true
     toc_float:
       collapsed: false
-    css: styles.css
