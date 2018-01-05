@@ -9,7 +9,7 @@ Want to build your own webpage? Need to quickly generate some content and make i
 There are a few pieces that all need to fit together to create a website using this framework. The main pieces are as follows:
 
   1. `_site.yml`: This is the road map that provides the outline of your site. It's the bones you stitch everything onto, and the design of how you want things to look overall. 
-  2.  `.Rmd`: These are your Rmarkdown files that will be used to render your  webpage content, each `.Rmd` should have a correpsonding `.html`. When we knit, the `.Rmd` will create file named the same, but with a `.html` extension.
+  2.  `.Rmd`: These are your Rmarkdown files that will be used to render your  webpage content, each `.Rmd` should have a correpsonding `.html`. When we knit, the `.Rmd`, RStudio will create file named the identically, but with a `.html` extension.
 
 **Additional Options**
 
